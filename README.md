@@ -4,9 +4,9 @@ It is an [ansible](http://www.ansible.com/home) role to install postgres 9.3.
 
 ### What problem does it solve and why is it useful?
 
-Often times you just want a single database server without any fuss or headaches. The only thing you need to supply to this role is which user and password it should use for the postgres user account and you're on your way.
+Often times you just want a single database server without any fuss or headaches. The only thing you need to supply to this role is the username/password it should use for the postgres user account and you're on your way.
 
-It will continue to be updated to provide the latest stable of postgres.
+It will continue to be updated to provide the latest stable version of postgres.
 
 ## Role variables
 
@@ -18,7 +18,7 @@ postgres_password: pleasedonthackme
 
 ## Example playbook
 
-For the sake of this example let's assume you have a group called **database** and you have a typical `site.yml` file.
+For the sake of this example let's say you have a group called **database** and you have a typical `site.yml` file.
 
 To use this role edit your `site.yml` file to look something like this:
 
@@ -48,7 +48,7 @@ If you plan to publish your inventory somewhere and you do not want plain text p
 postgres_password: "{{ lookup('password', '/path/to/secrets/' + 'database_password') }}"
 ```
 
-In the above case `database_file` would be a text file containing your password. You can encrypt this file on your local file system if you want but that is outside of the scope of this documentation.
+In the above case `database_password` would be a text file containing your password. You can encrypt this file on your local file system if you want but that is outside of the scope of this documentation.
 
 ## Installation
 
