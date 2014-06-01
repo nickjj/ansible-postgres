@@ -12,8 +12,12 @@ It will continue to be updated to provide the latest stable version of postgres.
 
 ```
 ---
+# The postgres username and password.
 postgres_user: deploy
 postgres_password: pleasedonthackme
+
+# The amount in seconds to cache apt-update.
+apt_cache_valid_time: 86400
 ```
 
 ## Example playbook

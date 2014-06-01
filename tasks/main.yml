@@ -1,9 +1,9 @@
 ---
 - name: ensure ansible's apt_repository dependency is installed
-  apt: pkg=python-apt state=latest update_cache=true cache_valid_time=86400
+  apt: pkg=python-apt state=latest update_cache=true cache_valid_time={{ apt_cache_valid_time }}
 
 - name: ensure postgres dependencies are installed
-  apt: pkg=python-psycopg2 state=latest update_cache=true cache_valid_time=86400
+  apt: pkg=python-psycopg2 state=latest update_cache=true cache_valid_time={{ apt_cache_valid_time }}
 
 - name: ensure postgres apt key exists
   apt_key: url=http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc
@@ -12,7 +12,7 @@
   apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main'
 
 - name: ensure postgres is installed
-  apt: pkg=postgresql-9.3 state=latest update_cache=true cache_valid_time=86400
+  apt: pkg=postgresql-9.3 state=latest update_cache=true cache_valid_time={{ apt_cache_valid_time }}
   notify:
   - restart postgres
 
