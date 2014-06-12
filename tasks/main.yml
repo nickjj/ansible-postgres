@@ -14,17 +14,17 @@
 - name: ensure postgres is installed
   apt: pkg=postgresql-9.3 state=latest update_cache=true cache_valid_time={{ apt_cache_valid_time }}
   notify:
-  - restart postgres
+    - restart postgres
 
 - name: ensure postgres' pg_hba is configured
   template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf
   notify:
-  - restart postgres
+    - restart postgres
 
 - name: ensure postgres is configured
   template: src=postgresql.conf.j2 dest=/etc/postgresql/9.3/main/postgresql.conf
   notify:
-  - restart postgres
+    - restart postgres
 
 - name: ensure a postgres user is created
   postgresql_user: name={{ postgres_user }} password={{ postgres_password }} role_attr_flags=CREATEDB
