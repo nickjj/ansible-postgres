@@ -1,4 +1,4 @@
-## What is ansible-postgres?
+## What is ansible-postgres? [![Build Status](https://secure.travis-ci.org/nickjj/ansible-postgres.png)](http://travis-ci.org/nickjj/ansible-postgres)
 
 It is an [ansible](http://www.ansible.com/home) role to install postgres 9.3.
 
