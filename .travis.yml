@@ -26,5 +26,5 @@ script:
   - >
     ps cax
     | grep -q 'postgresql'
-    && (echo 'Version test: pass' && exit 0)
-    || (echo 'Version test: fail' && exit 1)
+    && (echo 'Running' test: pass' && exit 0)
+    || (echo 'Running test: fail' && exit 1)
