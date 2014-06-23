@@ -25,6 +25,6 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
   - >
     ps cax
-    | grep -q 'postgresql'
-    && (echo 'Running test: pass' && exit 0)
-    || (echo 'Running test: fail' && exit 1)
+    | grep -q 'postgres'
+    && (echo 'Process running test: pass' && exit 0)
+    || (echo 'Process running test: fail' && exit 1)
