@@ -40,7 +40,7 @@ apt_cache_valid_time: 86400
 
 ### Allow remote hosts to access your postgres server
 
-If your database is on a different host than the servers using your postgres connection then you need to white list them in your hba config. You can do that by populating `postgres_allow_access_from`.
+If your database is on a different host than the servers using your postgres connection then you need to white list them in your hba config. You can do that by populating `postgres_allowed_hosts`.
 
 
 ```
