@@ -27,7 +27,7 @@
     - restart postgres
 
 - name: ensure a postgres user is created
-  postgresql_user: name={{ postgres_user }} password={{ postgres_password }} role_attr_flags=CREATEDB
+  postgresql_user: name={{ postgres_username }} password={{ postgres_password }} role_attr_flags=CREATEDB
   sudo_user: postgres
 
 - name: ensure postgres starts on a fresh reboot
