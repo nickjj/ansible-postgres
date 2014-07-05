@@ -32,7 +32,7 @@ postgres_syslog_facility: LOCAL0
 postgres_syslog_ident: postgres
 
 # Allow access from remote hosts, explained more below.
-postgres_remote_hosts: []
+postgres_allowed_hosts: []
 
 # The amount in seconds to cache apt-update.
 apt_cache_valid_time: 86400
