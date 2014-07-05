@@ -46,7 +46,7 @@ If your database is on a different host than the servers using your postgres con
 ```
 postgres_allowed_hosts:
     # What list of IPs are allowed to connect?
-    # OPTIONAL: Defaults to [] (only localhost).]
+    # OPTIONAL: Defaults to [] (only localhost can connect).
   - hosts: []
 
     # What network interface should be used?
