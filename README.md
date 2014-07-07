@@ -80,7 +80,7 @@ To use this role edit your `site.yml` file to look something like this:
 ```
 ---
 - name: ensure database servers are configured
-- hosts: database
+  hosts: database
 
   roles:
     - { role: nickjj.postgres, tags: postgres }
@@ -122,7 +122,7 @@ In the above case `database_password` would be a text file containing your passw
 
 ## Requirements
 
-Tested on ubuntu 12.04 LTS but it should work on other versions that are similar.
+Tested on ubuntu 12.04 LTS and debian wheezy but it should work on other versions that are similar.
 
 ## Ansible galaxy
 
