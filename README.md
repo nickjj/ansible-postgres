@@ -94,11 +94,8 @@ postgres_user: hulk
 postgres_password: notverysecure
 postgres_log_destination: syslog
 
-postgres_remote_hosts:
-  - hosts: "{{ groups['my_rails_apps'] }}"
-
 # If you wanted to add multiple groups or servers...
-postgres_remote_hosts:
+postgres_allowed_hosts:
   - hosts: "{{ groups['my_rails_apps'] }}"
   - hosts: "{{ groups['my_golang_apps'] }}"
     interface: "eth1"
